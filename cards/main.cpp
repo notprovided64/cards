@@ -7,7 +7,10 @@ enum NUMBER : uint8_t {invalid_number, ace, two, three, four, five, six, seven,
                        eight, nine, ten, jack, queen, king};
 enum SUIT : uint8_t {invalid_suit, club, diamond, heart, spade};
 
-#define ENUM_TO_CSTR(e) case e: return #e; break
+constexpr const char * SPADE_UNICODE = "\u2660";
+constexpr const char * CLUB_UNICODE = "\u2663";
+constexpr const char * HEART_UNICODE = "\u2665";
+constexpr const char * DIAMONG_UNICODE = "\u2666";
 
 struct Card {
   
@@ -41,32 +44,32 @@ struct Card {
   std::string number_str() const {
       switch (number.e)
       {
-          ENUM_TO_CSTR(ace);
-          ENUM_TO_CSTR(two);
-          ENUM_TO_CSTR(three);
-          ENUM_TO_CSTR(four);
-          ENUM_TO_CSTR(five);
-          ENUM_TO_CSTR(six);
-          ENUM_TO_CSTR(seven);
-          ENUM_TO_CSTR(eight);
-          ENUM_TO_CSTR(nine);
-          ENUM_TO_CSTR(ten);
-          ENUM_TO_CSTR(jack);
-          ENUM_TO_CSTR(queen);
-          ENUM_TO_CSTR(king);
-        default:
-          return "<invalid card number>";
-          break;
+          case ace: return "A";
+          case two: return "2";
+          case three: return "3";
+          case four: return "4";
+          case five: return "5";
+          case six: return "6";
+          case seven: return "7";
+          case eight: return "8";
+          case nine: return "9";
+          case ten: return "10";
+          case jack: return "J";
+          case queen: return "Q";
+          case king: return "K";
+          default:
+            return "<invalid card number>";
+            break;
       }
   }
   std::string suit_str() const
   {
       switch (suit.e)
       {
-          ENUM_TO_CSTR(club);
-          ENUM_TO_CSTR(diamond);
-          ENUM_TO_CSTR(heart);
-          ENUM_TO_CSTR(spade);
+        case club: return CLUB_UNICODE;
+        case diamond: return DIAMONG_UNICODE;
+        case heart: return HEART_UNICODE;
+        case spade: return SPADE_UNICODE;
           default:
             return "<invalid card suit>";
             break;
@@ -74,7 +77,7 @@ struct Card {
   }
 
   void dump() const {
-    printf("Your card is a %s of %s\n",
+    printf("%s%s\n",
            number_str().c_str(), suit_str().c_str());
   }
 };
@@ -136,6 +139,8 @@ public:
 int main(int argc, const char * argv[])
 {
     Cards deck = Cards::makeStandardDeck(true);
+    deck.dump();
+    puts("\n6 cards from deck:");
     Cards six = deck.getCards(6);
     six.dump();
 
