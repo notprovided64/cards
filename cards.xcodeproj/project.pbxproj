@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A1256AB242AE1140040545B /* card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A1256A9242AE1140040545B /* card.cpp */; };
+		5A1256AF242AF26C0040545B /* cards.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A1256AD242AF26C0040545B /* cards.cpp */; };
 		5A2D063222F7D9180082C021 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D063122F7D9180082C021 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A1256A9242AE1140040545B /* card.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = card.cpp; sourceTree = "<group>"; };
+		5A1256AA242AE1140040545B /* card.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = card.hpp; sourceTree = "<group>"; };
+		5A1256AC242AF1550040545B /* enum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = enum.h; sourceTree = "<group>"; };
+		5A1256AD242AF26C0040545B /* cards.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cards.cpp; sourceTree = "<group>"; };
+		5A1256AE242AF26C0040545B /* cards.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cards.hpp; sourceTree = "<group>"; };
 		5A2D062E22F7D9180082C021 /* cards */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cards; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2D063122F7D9180082C021 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				5A2D063122F7D9180082C021 /* main.cpp */,
+				5A1256AC242AF1550040545B /* enum.h */,
+				5A1256A9242AE1140040545B /* card.cpp */,
+				5A1256AA242AE1140040545B /* card.hpp */,
+				5A1256AD242AF26C0040545B /* cards.cpp */,
+				5A1256AE242AF26C0040545B /* cards.hpp */,
 			);
 			path = cards;
 			sourceTree = "<group>";
@@ -119,6 +131,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A2D063222F7D9180082C021 /* main.cpp in Sources */,
+				5A1256AF242AF26C0040545B /* cards.cpp in Sources */,
+				5A1256AB242AE1140040545B /* card.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
